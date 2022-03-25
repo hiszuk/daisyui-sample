@@ -4,7 +4,7 @@ import { useRecoilValue } from 'recoil'
 import { NarrowSidebar } from '../store/NarrowSidebar'
 import { baseDir } from '../utils/config'
 
-const paths = [`${baseDir}`, `${baseDir}/info`, `${baseDir}/stats`]
+const paths = [`${baseDir}/`, `${baseDir}/info`, `${baseDir}/stats`]
 
 const SidebarWide: VFC = () => {
   const active = 'text-primary-content bg-primary'

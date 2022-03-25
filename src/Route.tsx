@@ -15,7 +15,7 @@ export const RootRouter = () => {
     {
       element: <DefaultLayout />,
       children: [
-        { path: `${baseDir}`, element: <Home /> },
+        { path: `${baseDir}/`, element: <Home /> },
         { path: `${baseDir}/info`, element: <InfoPage /> },
         { path: `${baseDir}/stats`, element: <StatsPage /> },
       ]

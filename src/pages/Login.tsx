@@ -32,15 +32,15 @@ const Login: VFC = () => {
           <label className="label">
             <span className="label-text">Password</span>
             <span className="label-text-alt">
-              <Link to={`${baseDir}`} className="link-primary">Forget Password?</Link>
+              <Link to={`${baseDir}/`} className="link-primary">Forget Password?</Link>
             </span>
           </label>
           <input type="password" placeholder="your password here" className="input input-bordered input-primary w-full max-w-xs" />
         </div>
         <div className="card-actions justify-center mt-5">
-          <button className="btn btn-block btn-primary" onClick={() => navigate(`${baseDir}`)}>Login</button>
+          <button className="btn btn-block btn-primary" onClick={() => navigate(`${baseDir}/`)}>Login</button>
         </div>
-        <div className="divider text-xs mb-0"><Link to={`${baseDir}`} className="link-primary">OR SIGN UP</Link></div>
+        <div className="divider text-xs mb-0"><Link to={`${baseDir}/`} className="link-primary">OR SIGN UP</Link></div>
       </div>
     </div>
 
