@@ -9,8 +9,6 @@ export default defineConfig({
     WindiCSS()
   ],
   build: {
-    outDir: 'docs',
-    emptyOutDir: true,
+    outDir: 'dist',
   },
-  base: '/daisyui-sample/',
 })
