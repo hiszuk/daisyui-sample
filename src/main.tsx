@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { RootRouter } from './Route'
 import { RecoilRoot } from 'recoil'
 import 'windi.css'
-import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
