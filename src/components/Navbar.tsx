@@ -4,6 +4,7 @@ import { useRecoilState, useRecoilValue } from 'recoil'
 import { DarkMode } from '../store/DarkMode'
 import { GlobalCart, GlobalCartAmount } from '../store/GlobalCart'
 import { NarrowSidebar } from '../store/NarrowSidebar'
+import { baseDir } from '../utils/config'
 import CartItems from './Navbar/CartItems'
 
 const Navbar: VFC = () => {
@@ -66,7 +67,7 @@ const Navbar: VFC = () => {
               </a>
             </li>
             <li><a>Settings</a></li>
-            <li><Link to='logout'>Logout</Link></li>
+            <li><Link to={`${baseDir}/logout`}>Logout</Link></li>
           </ul>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useSetRecoilState } from 'recoil'
 import { DarkMode } from '../store/DarkMode'
 import { GlobalCart } from '../store/GlobalCart'
 import { NarrowSidebar } from '../store/NarrowSidebar'
+import { baseDir } from '../utils/config'
 
 const Logout: VFC = () => {
   const setDark = useSetRecoilState(DarkMode)
@@ -15,7 +16,7 @@ const Logout: VFC = () => {
     setDark(false)
     setCart([])
     setNarrow(false)
-    navigate('/login')
+    navigate(`${baseDir}/login`)
   })
 
   return (

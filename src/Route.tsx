@@ -8,25 +8,26 @@ import StatsPage from './pages/Stats'
 import Login from './pages/Login'
 import Logout from './pages/Logout'
 import NotFound from './pages/NotFound'
+import { baseDir } from './utils/config'
 
 export const RootRouter = () => {
   return useRoutes([
     {
       element: <DefaultLayout />,
       children: [
-        { path: "/", element: <Home /> },
-        { path: "info", element: <InfoPage /> },
-        { path: "stats", element: <StatsPage /> },
+        { path: `${baseDir}`, element: <Home /> },
+        { path: `${baseDir}/info`, element: <InfoPage /> },
+        { path: `${baseDir}/stats`, element: <StatsPage /> },
       ]
     },
     {
       element: <SimpleLayout />,
       children: [
-        { path: "login", element: <Login /> },
-        { path: "logout", element: <Logout /> },
-        { path: "404", element: <NotFound /> },
+        { path: `${baseDir}/login`, element: <Login /> },
+        { path: `${baseDir}/logout`, element: <Logout /> },
+        { path: `${baseDir}/404`, element: <NotFound /> },
       ]
     },
-    { path: '*', element: <Navigate to='404' /> },
+    { path: '*', element: <Navigate to={`${baseDir}/404`} /> },
   ])
 }

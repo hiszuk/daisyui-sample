@@ -2,8 +2,9 @@ import { VFC, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useRecoilValue } from 'recoil'
 import { NarrowSidebar } from '../store/NarrowSidebar'
+import { baseDir } from '../utils/config'
 
-const paths = ['/', '/info', '/stats']
+const paths = [`${baseDir}`, `${baseDir}/info`, `${baseDir}/stats`]
 
 const SidebarWide: VFC = () => {
   const active = 'text-primary-content bg-primary'
