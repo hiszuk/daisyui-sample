@@ -87,10 +87,24 @@ const SidebarNarrow: VFC = () => {
 
 const SideBar: VFC = () => {
   const isNarrowSidebar = useRecoilValue(NarrowSidebar)
+  const [narrow, setNarrow] = useState('')
+  const [wide, setWide] = useState('')
+
+  useEffect(() => {
+    const classWide = isNarrowSidebar ? 'hidden' : 'hidden md:block'
+    const classNarrow = isNarrowSidebar ? 'block' : 'block md:hidden'
+    setWide(classWide)
+    setNarrow(classNarrow)
+  }, [isNarrowSidebar])
 
   return (
     <>
-      {isNarrowSidebar ? <SidebarNarrow /> : <SidebarWide />}
+      <div className={`${narrow}`}>
+        <SidebarNarrow />
+      </div>
+      <div className={`${wide}`}>
+        <SidebarWide />
+      </div>
     </>
   )
 }
