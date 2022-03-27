@@ -24,12 +24,16 @@ const ShopItemCard: VFC<ShopItemProps> = ({
 
   return (
     <div className="card card-compact bg-base-100 shadow-xl md:h-96">
-      <figure><img src={imageUrl} alt={title} /></figure>
+      <figure>
+        <img src={imageUrl} alt={title} />
+      </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-between items-center">
-          <div className="ml-5 text-3xl font-bold text-accent-focus">${unitPrice}</div>
+          <div className="ml-5 text-3xl font-bold text-accent-focus">
+            ${unitPrice}
+          </div>
           <button
             className="btn btn-primary"
             onClick={() => handleClickBuy(id, title, unitPrice)}

@@ -1,6 +1,5 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import WindiCSS from 'vite-plugin-windicss'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,8 +7,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  plugins: [
-    react(),
-    WindiCSS()
-  ],
+  plugins: [react()],
 })

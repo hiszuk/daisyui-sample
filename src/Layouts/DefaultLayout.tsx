@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useRecoilValue } from 'recoil'
 import '../App.css'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import SideBar from '../components/Sidebar'
 import { DarkMode } from '../store/DarkMode'
 
@@ -16,7 +16,10 @@ const DefaultLayout = () => {
   }, [isDark])
 
   return (
-    <div data-theme={theme} className="text-base-content bg-base-100 flex flex-col min-h-screen">
+    <div
+      data-theme={theme}
+      className="text-base-content bg-base-100 flex flex-col min-h-screen"
+    >
       <header>
         <Navbar />
       </header>

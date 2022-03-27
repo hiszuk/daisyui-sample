@@ -9,7 +9,7 @@ const HomePage: VFC = () => {
       <Head title="Home/Shopping Items" />
       {ShopItems.map((d) => (
         <div key={d.id}>
-          <ShopItemCard 
+          <ShopItemCard
             id={d.id}
             title={d.title}
             description={d.description}

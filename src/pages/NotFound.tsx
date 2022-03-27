@@ -10,9 +10,7 @@ const NotFound: VFC = () => {
         <div className="stat-value text-7xl text-center">404</div>
         <div className="stat-actions text-right">
           <Link to={`${baseDir}`}>
-            <button className="btn btn-secondary">
-              GO HOME
-            </button>
+            <button className="btn btn-secondary">GO HOME</button>
           </Link>
         </div>
       </div>
